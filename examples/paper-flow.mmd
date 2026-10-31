@@ -1,0 +1,17 @@
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'Helvetica, Arial, sans-serif','fontSize':'11px','lineColor':'#333333','primaryColor':'#FFFFFF','primaryBorderColor':'#333333','primaryTextColor':'#1A1A1A'},'flowchart':{'curve':'linear','nodeSpacing':45,'rankSpacing':55}}}%%
+flowchart LR
+  I[Raw signal] --> W[Sliding window]
+  W --> E[Encoder]
+  E --> D[Decoder]
+  D --> S[Reconstruction error]
+  S --> T{Threshold}
+  T -->|above| A[Alert]
+  T -->|below| N[Normal]
+
+  classDef data fill:#F5F7FA,stroke:#D6E4F0,stroke-width:1px,color:#1A1A1A
+  classDef main fill:#D6E4F0,stroke:#2E6F9E,stroke-width:1.2px,color:#1A1A1A
+  classDef spot fill:#8FB8DE,stroke:#1F3A5F,stroke-width:1.4px,color:#0B1B2B
+
+  class I,W data
+  class E,D,S main
+  class T,A,N spot

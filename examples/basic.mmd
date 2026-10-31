@@ -1,0 +1,7 @@
+flowchart TD
+  U[用户：画一张图] --> A[DSH Agent]
+  A --> M[写 Mermaid / draw.io XML 到工作区]
+  M --> C[本机 draw.io Desktop CLI]
+  C --> F[PNG / SVG / PDF]
+  F --> P[present 给用户]
+  C -. 全程离线，不上传 .-> X[(无云服务)]

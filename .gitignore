@@ -1,0 +1,21 @@
+# Ignore transient export artifacts and local scratch files.
+_tmp/
+tmp/
+*.tmp
+*.log
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node (only used by optional generators such as examples/build scripts)
+node_modules/
+
+# Generated exports at the repo root, if someone runs the examples in place
+/*.png
+/*.svg
+/*.pdf
+!/examples/*.png
+!/examples/*.svg
